@@ -7,7 +7,7 @@ function Home() {
     fetch('http://localhost:5000/contacts')
       .then(response => response.json())
       .then(data => setContacts(data))
-      .catch(error => console.error('Error fetching contacts:', error));
+      .catch(error => console.error('Error fetching contactss:', error));
   }, []);
 
   return (
