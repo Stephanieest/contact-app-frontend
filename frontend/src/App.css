@@ -1,21 +1,13 @@
+/* Base Styles */
 body {
-  font-family: 'Arial', sans-serif;
+  background-color: #2c2c2c;
+  font-family: 'Comic Sans MS', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
-  color: #333;
+  color: #f2f2f2;
 }
 
-a {
-  text-decoration: none;
-  color: #007bff;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* App Container */
+/* General Container */
 .app-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -24,9 +16,10 @@ a:hover {
 
 /* Navigation */
 nav {
-  background-color: #007bff;
-  padding: 15px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #4f4f4f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 nav ul {
@@ -34,180 +27,198 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 
-nav ul li {
-  margin: 0;
-}
-
-nav ul li a {
-  color: white;
+nav li a {
+  text-decoration: none;
+  color: #ffb3d9;
   font-size: 18px;
+  font-weight: bold;
   transition: color 0.3s;
 }
 
-nav ul li a:hover {
-  color: #ffd700;
-}
-
-/* Main Content */
-.main-content {
-  padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+nav li a:hover {
+  color: #f0c4e0;
 }
 
 /* Landing Page */
 #landing-container {
   text-align: center;
+  background-color: #3a3a3a;
   padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 #landing-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+  font-size: 36px;
+  color: #ff79b0;
 }
 
 #landing-header p {
-  font-size: 1.2em;
+  font-size: 20px;
+  color: #b2a0d6;
 }
 
 #landing-button {
-  display: inline-block;
-  margin-top: 20px;
+  background-color: #ffb3d9;
   padding: 10px 20px;
-  background-color: #007bff;
+  border-radius: 25px;
   color: white;
-  border-radius: 5px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
   transition: background-color 0.3s;
 }
 
 #landing-button:hover {
-  background-color: #0056b3;
+  background-color: #ff7f99;
 }
 
-#landing-features {
-  margin-top: 50px;
+#landing-features .feature {
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  background-color: #4f4f4f;
+  border-radius: 10px;
+  width: 28%;
 }
 
-.feature {
-  margin-bottom: 30px;
-}
-
-.feature h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.feature p {
-  font-size: 1em;
+#landing-features .feature h2 {
+  color: #ffb3d9;
 }
 
 #landing-footer {
-  margin-top: 50px;
-  font-size: 0.9em;
-  color: #666;
+  margin-top: 40px;
+  color: #b2a0d6;
 }
 
-/* Form Styles */
+/* Form Styling */
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 30px;
+  background-color: #3a3a3a;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  width: 50%; /* Adjusted form width */
+  margin: 0 auto;
+}
+
+form div {
+  margin-bottom: 15px;
 }
 
 label {
+  display: block;
   font-weight: bold;
+  color: #ffb3d9;
 }
 
 input,
-textarea,
-select {
+button {
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1em;
+  font-size: 16px;
+  border: 2px solid #ffb3d9;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+input[type="checkbox"] {
+  width: auto;
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+  background-color: #f0c4e0;
   border: none;
-  border-radius: 5px;
-  font-size: 1em;
   cursor: pointer;
-  transition: background-color 0.3s;
+  margin-top: 15px;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #ff7f99;
+  color: white;
 }
 
-button[type='button'] {
-  background-color: #6c757d;
+button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
 }
 
-button[type='button']:hover {
-  background-color: #5a6268;
+/* Created Item Form (Shorter Width) */
+#created-item-form {
+  width: 50%; /* Adjusted width for created item form */
 }
 
-/* List Styles */
+#created-item-form input {
+  width: 100%;
+}
+
+#created-item-form button {
+  width: auto; /* Making button less wide */
+}
+
+/* Created Users and Contacts Forms */
+#create-user-form,
+#create-contact-form {
+  width: 50%; /* Adjusted form width */
+  margin: 0 auto;
+}
+
+#create-user-form input,
+#create-contact-form input {
+  width: 100%; /* Inputs inside create forms have a smaller width */
+}
+
+#create-user-form button,
+#create-contact-form button {
+  width: auto; /* Making buttons less wide */
+}
+
+/* List Styling */
 ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
-ul li {
-  background-color: #f8f9fa;
-  margin-bottom: 10px;
+li {
+  background-color: #4f4f4f;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  margin-bottom: 15px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 18px;
 }
 
-ul li button {
-  margin-left: 10px;
+li button {
+  background-color: #ffb3d9;
+  border-radius: 5px;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  width: auto; /* Adjusted button width */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .main-content {
-    padding: 10px;
-  }
-
-  form {
-    gap: 10px;
-  }
-
-  input,
-  textarea,
-  select {
-    font-size: 0.9em;
-  }
-
-  button {
-    font-size: 0.9em;
-  }
-
-  ul li {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  ul li button {
-    margin-top: 10px;
-    margin-left: 0;
-  }
+li button:hover {
+  background-color: #ff7f99;
+  color: white;
 }
+
+li button:active {
+  transform: scale(0.98);
+}
+
+/* Edit and Delete Buttons */
+button:focus {
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 function ContactForm() {
   const [contacts, setContacts] = useState([]);
@@ -120,6 +122,7 @@ function ContactForm() {
       <ul>
         {contacts.map((contact) => (
           <li key={contact.id}>
+            <FontAwesomeIcon icon={faUser} size="2x" style={{ marginRight: '10px' }} />
             {contact.name} ({contact.phone}, {contact.email}, {contact.address}){' '}
             <button onClick={() => handleEdit(contact)}>Edit</button>{' '}
             <button onClick={() => handleDelete(contact.id)}>Delete</button>
