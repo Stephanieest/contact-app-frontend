@@ -20,7 +20,7 @@ This is the frontend for the Contact App, built with React and Vite. It allows u
 1. Clone the repository:
 
    ```sh
-   git clone <repository-url>
+   git clone <git@github.com:Stephanieest/contact-app-frontend.git>
    cd frontend
    ```
 
@@ -37,8 +37,6 @@ Start the development server:
 ```sh
 npm run dev
 ```
-
-The app will be running at [http://localhost:3000](http://localhost:3000).
 
 ## Project Structure
 
