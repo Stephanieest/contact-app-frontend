@@ -13,6 +13,8 @@ This is the frontend for the Contact App, built with React and Vite. It allows u
 - Node.js 14+
 - npm
 
+## This is my backend repo <https://github.com/Stephanieest/contact-app-backend>
+
 ## Getting Started
 
 ### Installation
