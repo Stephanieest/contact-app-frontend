@@ -15,12 +15,14 @@ This is the frontend for the Contact App, built with React and Vite. It allows u
 
 ## Getting Started
 
+## This is my backend repo <https://github.com/Stephanieest/contact-app-backend>
+
 ### Installation
 
 1. Clone the repository:
 
    ```sh
-   git clone <repository-url>
+   git clone <git@github.com:Stephanieest/contact-app-frontend.git>
    cd frontend
    ```
 
