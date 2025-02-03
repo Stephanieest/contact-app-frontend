@@ -31,6 +31,6 @@
   },
   "homepage": "https://ringzing-frontend.vercel.app/",
   "engines": {
-    "node": "16.x"
+    "node": "22.x"
   }
 }
