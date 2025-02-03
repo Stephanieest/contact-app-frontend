@@ -13,7 +13,7 @@ function FavoriteForm() {
 
   const loadFavorites = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:5000/favorites');
+      const response = await fetch('http://127.0.0.1:8000/favorites');
       if (!response.ok) {
         throw new Error('Failed to fetch favorites');
       }
@@ -33,7 +33,7 @@ function FavoriteForm() {
   const handleSubmit = async (values, { resetForm }) => {
     try {
       const method = editMode ? 'PUT' : 'POST';
-      const endpoint = editMode ? `http://127.0.0.1:5000/favorites/${currentFavoriteId}` : 'http://127.0.0.1:5000/favorites';
+      const endpoint = editMode ? `http://127.0.0.1:8000/favorites/${currentFavoriteId}` : 'http://127.0.0.1:8000/favorites';
 
       const response = await fetch(endpoint, {
         method,
@@ -63,7 +63,7 @@ function FavoriteForm() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/favorites/${id}`, {
+      const response = await fetch(`http://127.0.0.1:8000/favorites/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) {

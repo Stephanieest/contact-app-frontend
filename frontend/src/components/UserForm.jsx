@@ -13,7 +13,7 @@ function UserForm() {
 
   const loadUsers = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:5000/users');
+      const response = await fetch('http://127.0.0.1:8000/users');
       if (!response.ok) {
         throw new Error('Failed to fetch users');
       }
@@ -32,7 +32,7 @@ function UserForm() {
   const handleSubmit = async (values, { resetForm }) => {
     try {
       const method = editMode ? 'PUT' : 'POST';
-      const endpoint = editMode ? `http://127.0.0.1:5000/users/${currentUserId}` : 'http://127.0.0.1:5000/users';
+      const endpoint = editMode ? `http://127.0.0.1:8000/users/${currentUserId}` : 'http://127.0.0.1:8000/users';
 
       const response = await fetch(endpoint, {
         method,
@@ -62,7 +62,7 @@ function UserForm() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/users/${id}`, {
+      const response = await fetch(`http://127.0.0.1:8000/users/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) {
