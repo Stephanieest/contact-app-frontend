@@ -8,7 +8,7 @@ This is the frontend for the Contact App, built with React and Vite. It allows u
 - View and manage contacts
 - View and manage favorite contacts
 
-[API Documentation](http://127.0.0.1:8000)
+[API Documentation](http://127.0.0.1:8000/)
 
 
 ## Requirements
