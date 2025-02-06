@@ -13,7 +13,7 @@ function ContactForm() {
 
   const loadContacts = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/contacts');
+      const response = await fetch('https://ringzingg.onrender.com/contacts');
       if (!response.ok) {
         throw new Error('Failed to fetch contacts');
       }
@@ -35,7 +35,7 @@ function ContactForm() {
   const handleSubmit = async (values, { resetForm }) => {
     try {
       const method = editMode ? 'PUT' : 'POST';
-      const endpoint = editMode ? `http://127.0.0.1:8000/contacts/${currentContactId}` : 'http://127.0.0.1:8000/contacts';
+      const endpoint = editMode ? `https://ringzingg.onrender.com/contacts${currentContactId}` : 'https://ringzingg.onrender.com/contacts';
 
       const response = await fetch(endpoint, {
         method,
@@ -65,7 +65,7 @@ function ContactForm() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/contacts${id}`, {
+      const response = await fetch(`https://ringzingg.onrender.com/contacts${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) {
